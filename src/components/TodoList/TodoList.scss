@@ -1,9 +1,9 @@
 .toggle-todo {
+    padding: 6px 12px;
     font-size: 16px;
     border: none;
     background: white;
     cursor: pointer;
-    padding: 6px 12px;
     border-radius: 4px;
     border: 1px solid white;
 
@@ -15,4 +15,9 @@
         color: white;
         background: grey;
     }
+}
+
+.empty {
+    padding: 6px 12px;
+    font-size: 16px;
 }

@@ -22,7 +22,7 @@ const TodoList: React.FC<TodoListProps> = ({ todos, setTodos }) => {
     if (todos.length === 0) {
         return (
             <ul>
-                <li>No todos left!</li>
+                <li className='empty' >No todos left!</li>
             </ul>
         )
     }
