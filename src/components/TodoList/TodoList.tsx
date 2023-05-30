@@ -3,6 +3,8 @@ import React, { SetStateAction } from 'react';
 import Todo from '../../interfaces/todo';
 import DeleteTodo from '../DeleteTodo/DeleteTodo';
 
+import './TodoList.scss';
+
 interface TodoListProps {
     todos: Todo[];
     setTodos: React.Dispatch<SetStateAction<Todo[]>>
@@ -17,19 +19,28 @@ const TodoList: React.FC<TodoListProps> = ({ todos, setTodos }) => {
         setTodos(updatedTodos);
     }
 
+    if (todos.length === 0) {
+        return (
+            <ul>
+                <li>No todos left!</li>
+            </ul>
+        )
+    }
+
     return (
         <ul>
             {todos.map(todo => (
 
                 <li key={todo.id}>
-                    <span
+                    <button
+                        className='toggle-todo'
                         style={{
                             textDecoration: todo.done ? "line-through" : ""
                         }}
                         onClick={() => handleToggleTodo(todo)}
                     >
                         {todo.text}
-                    </span>
+                    </button>
                     <DeleteTodo todo={todo} setTodos={setTodos} />
                 </li>
             ))}

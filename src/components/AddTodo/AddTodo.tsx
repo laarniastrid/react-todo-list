@@ -51,7 +51,7 @@ const AddTodo: React.FC<AddTodoProps> = ({ setTodos }) => {
                 onChange={handleTodoChange}
                 ref={inputRef}
             />
-            <button type="submit" disabled={isInputValid === false} >Submit</button>
+            <button className="submit" type="submit" disabled={isInputValid === false} >Submit</button>
         </form>
     );
 }
