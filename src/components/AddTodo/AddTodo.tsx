@@ -44,7 +44,13 @@ const AddTodo: React.FC<AddTodoProps> = ({ setTodos }) => {
 
     return (
         <form onSubmit={handleAddTodo}>
-            <input name="addTodo" placeholder="Add todo" onChange={handleTodoChange} ref={inputRef} />
+            <input
+                className="add-input"
+                name="addTodo"
+                placeholder="Add todo"
+                onChange={handleTodoChange}
+                ref={inputRef}
+            />
             <button type="submit" disabled={isInputValid === false} >Submit</button>
         </form>
     );
