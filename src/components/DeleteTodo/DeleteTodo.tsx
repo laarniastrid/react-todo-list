@@ -11,7 +11,6 @@ interface DeleteTodoProps {
 const DeleteTodo: React.FC<DeleteTodoProps> = ({ todo, setTodos }) => {
     function handleDeleteTodo() {
         const confirmed = window.confirm("Do you want to delete this item?");
-        console.log('confirmed ', confirmed);
 
         if (confirmed === false) {
             return;
